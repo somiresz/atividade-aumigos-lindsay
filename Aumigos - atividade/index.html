@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AuMigos — Adoção responsável de cães</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐶 AuMigos</h1>
+<!--
+        preload="metadata" foi escolhido porque o vídeo é um conteúdo
+        complementar da página. Assim, o navegador carrega apenas
+        os metadados inicialmente, evitando o carregamento completo
+        do vídeo antes que o usuário decida reproduzi-lo.
+    -->
+
+    <section>
+        <h2>Aumigos - Conectando amizades e laços</h2>
+        <nav>
+            <a href="#caes">Cãezinhos</a>
+            <a href="#adocao">Quero adotar</a>
+        </nav>
+
+        <video
+            controls
+            preload="metadata"
+            poster="video/cachorro-poster.jpg"
+        >
+            <source
+                src="video/cachorro.mp4"
+                type="video/mp4"
+            >
+
+            <source
+                src="video/cachorro.webm"
+                type="video/webm"
+            >
+
+            <track
+                kind="subtitles"
+                src="video/cachorro.vtt"
+                srclang="pt-BR"
+                label="Português"
+                default
+            >
+
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+    </section>
+    </header>
+
+    <main>
+
+        <section id="caes">
+
+            <h2>Conheça nossos cães</h2>
+
+            <p>
+                Cada cão tem sua própria personalidade, rotina e necessidades. 
+                Por isso, procuramos apresentar seu comportamento de forma clara para ajudar você a encontrar um companheiro que combine com sua realidade.
+            </p>
+
+            <!--
+                preload="metadata" foi escolhido porque o vídeo é um conteúdo
+                complementar da página. Assim, o navegador carrega apenas
+                os metadados inicialmente, evitando o carregamento completo
+                do vídeo antes que o usuário decida reproduzi-lo.
+            -->
+
+            <article>
+                <h3>Nina</h3>
+                <p>
+                    Nina costuma ser tranquila com as pessoas e gosta de receber atenção. 
+                    É brincalhona, mas também aproveita momentos mais calmos. 
+                    Ainda está sendo acompanhada para entendermos melhor como se comporta em diferentes ambientes e com outros cães.
+                </p>
+            </article>
+
+            <article>
+                <h3>Fênix</h3>
+                <p>
+                    Fênix é bastante ativo e gosta de brincar e explorar o ambiente. 
+                    Precisa de uma rotina com espaço para gastar energia e receber atenção. 
+                    Durante os passeios, pode ficar mais agitado, por isso é importante que o adotante tenha disposição para trabalhar sua educação e adaptação.
+                </p>
+            </article>
+            <article>
+                <h3>Kiko</h3>
+                <p>
+                    Kiko tem um comportamento mais tranquilo e costuma procurar a companhia das pessoas. 
+                    Gosta de ficar por perto e tende a se adaptar bem a momentos mais calmos. 
+                    Como qualquer cão em processo de adoção, pode precisar de um período de adaptação antes de mostrar completamente sua personalidade.
+                </p>
+            </article>
+        </section>
+
+
+        <section id="adocao">
+
+            <h2>Quero adotar!</h2>
+            <p>
+                Está pensando em adotar? Preencha o formulário abaixo para demonstrar seu interesse. 
+                Depois, nossa equipe poderá entrar em contato para conversar sobre sua rotina, suas expectativas e o cão que você gostaria de conhecer.
+            </p>
+            <form>
+                <fieldset>
+                    <legend>Seus dados</legend>
+                    <label for="nome">Nome completo:</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                    >
+                    <br><br>
+                    <label for="email">E-mail:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                    <br><br>
+                    <label for="telefone">Telefone:</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="[0-9]{10,11}"
+                        placeholder="Ex: 83999999999"
+                    >
+                    <br><br>
+                    <label for="idade">Idade:</label>
+                    <input
+                        type="number"
+                        id="idade"
+                        name="idade"
+                        min="18"
+                        max="100"
+                        required
+                    >
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Preferências de adoção</legend>
+                    <label for="cao">
+                        Qual cão você gostaria de conhecer?
+                    </label>
+                    <select
+                        id="cao"
+                        name="cao"
+                        required
+                    >
+                        <option value="">Selecione uma opção</option>
+                        <option value="nina">Nina</option>
+                        <option value="fenix">Fênix</option>
+                        <option value="kiko">Kiko</option>
+                        <option value="qualquer">
+                            Qualquer cão disponível
+                        </option>
+                    </select>
+                    <br><br>
+                    <label for="data">
+                        Data disponível para conhecer o cão:
+                    </label>
+                    <input
+                        type="date"
+                        id="data"
+                        name="data"
+                    >
+
+                </fieldset>
+                <br>
+                <button type="submit">
+                    Quero adotar! 🐾
+                </button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>
+            AuMigos — Adoção responsável e novos começos.
+        </p>
+        <p>
+            &copy; 2026 AuMigos
+        </p>
+    </footer>
+<script>
+    const video = document.querySelector("video");
+    console.log(
+        "MP4:",
+        video.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+    );
+    console.log(
+        "WebM:",
+        video.canPlayType('video/webm; codecs="vp8, vorbis"')
+    );
+</script>
+</body>
+</html>
