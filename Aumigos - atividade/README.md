@@ -1,3 +1,24 @@
+# 🐶 AuMigos — Adoção Responsável
+
+Site desenvolvido para uma atividade de HTML5 com o tema de **adoção responsável de cães**. A página apresenta alguns cães disponíveis para adoção e possui um formulário para quem tiver interesse em conhecê-los.
+
+## Funcionalidades
+
+- Apresentação dos cães disponíveis para adoção;
+- Informações sobre cada cão;
+- Formulário de interesse na adoção;
+- Validação dos campos do formulário;
+- Vídeo relacionado ao tema;
+- Vídeo em formatos MP4 e WebM;
+- Legendas no vídeo através de arquivo `.vtt`.
+
+## 🛠️ Tecnologias
+
+**HTML5** — estrutura semântica, formulários e recursos de multimídia.
+
+---
+## Avaliação
+
 DATA - quarta feira, 02 de setembro, 2026
 Avaliação em pares
 
