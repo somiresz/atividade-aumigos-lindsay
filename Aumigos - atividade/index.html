@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AuMigos — Adoção responsável de cães</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,10 +24,12 @@
 
     <section>
         <h2>Aumigos - Conectando amizades e laços</h2>
-        <nav>
-            <a href="#caes">Cãezinhos</a>
-            <a href="#adocao">Quero adotar</a>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#caes">Cãezinhos</a></li>
+                    <li><a href="#adocao">Quero adotar</a></li>
+                </ul>
+            </nav>
 
         <video
             controls
@@ -56,7 +61,7 @@
 
     <main>
 
-        <section id="caes">
+        <section id="caes" class="secao">
 
             <h2>Conheça nossos cães</h2>
 
@@ -72,7 +77,7 @@
                 do vídeo antes que o usuário decida reproduzi-lo.
             -->
 
-            <article>
+            <article class="card">
                 <h3>Nina</h3>
                 <p>
                     Nina costuma ser tranquila com as pessoas e gosta de receber atenção. 
@@ -80,8 +85,7 @@
                     Ainda está sendo acompanhada para entendermos melhor como se comporta em diferentes ambientes e com outros cães.
                 </p>
             </article>
-
-            <article>
+            <article class="card">
                 <h3>Fênix</h3>
                 <p>
                     Fênix é bastante ativo e gosta de brincar e explorar o ambiente. 
@@ -89,7 +93,7 @@
                     Durante os passeios, pode ficar mais agitado, por isso é importante que o adotante tenha disposição para trabalhar sua educação e adaptação.
                 </p>
             </article>
-            <article>
+            <article class="card">
                 <h3>Kiko</h3>
                 <p>
                     Kiko tem um comportamento mais tranquilo e costuma procurar a companhia das pessoas. 
@@ -97,11 +101,61 @@
                     Como qualquer cão em processo de adoção, pode precisar de um período de adaptação antes de mostrar completamente sua personalidade.
                 </p>
             </article>
+            <article class="card">
+                <h3>Stark</h3>
+                <p>
+                    Stark é um cão que está à procura de um lar cheio de carinho e atenção. 
+                    Sua personalidade ainda está sendo conhecida, por isso é importante respeitar seu tempo de adaptação ao novo ambiente.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Tobby</h3>
+                <p>
+                    Tobby é um cão que merece uma família responsável e disposta a oferecer cuidado, carinho e segurança.
+                    Ele ainda está em processo de adaptação e precisa de tempo para demonstrar sua personalidade.
+                </p>
+            </article>
+            <h3>Resumo dos nossos cães</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Porte</th>
+                        <th>Nível de energia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr>
+                        <td>Nina</td>
+                        <td>Pequeno</td>
+                        <td>Médio</td>
+                    </tr>
+                    <tr>
+                        <td>Fênix</td>
+                        <td>Grande</td>
+                        <td>Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Kiko</td>
+                        <td>Médio</td>
+                        <td>Baixo</td>
+                    </tr>
+                    <tr>
+                        <td>Stark</td>
+                        <td>Grande</td>
+                        <td>Médio</td>
+                    </tr>
+                    <tr>
+                        <td>Tobby</td>
+                        <td>Pequeno</td>
+                        <td>Alto</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
 
-        <section id="adocao">
-
+        <section id="adocao" class="secao">
             <h2>Quero adotar!</h2>
             <p>
                 Está pensando em adotar? Preencha o formulário abaixo para demonstrar seu interesse. 
@@ -160,6 +214,8 @@
                         <option value="nina">Nina</option>
                         <option value="fenix">Fênix</option>
                         <option value="kiko">Kiko</option>
+                        <option value="stark">Stark</option>
+                        <option value="tobby">Tobby</option>
                         <option value="qualquer">
                             Qualquer cão disponível
                         </option>
@@ -176,7 +232,7 @@
 
                 </fieldset>
                 <br>
-                <button type="submit">
+                <button type="submit" class="botao">
                     Quero adotar! 🐾
                 </button>
             </form>
