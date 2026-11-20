@@ -120,3 +120,126 @@ nav li {
     border-radius: var(--raio-borda);
     cursor: pointer;
 }
+/* Barra de navegação */
+.barra-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+}
+/* Links da navegação */
+.barra-navegacao nav a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Link da seção */
+.barra-navegacao nav a.ativo {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Efeito ao passar o mouse */
+.barra-navegacao nav a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+/* Menu dropdown */
+.item-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.item-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    margin: 5px 0;
+}
+
+.dropdown a {
+    display: block;
+}
+/* Cabeçalho fixo durante a rolagem */
+header {    
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--cor-fundo);
+    width: 100%;
+}
+/* Botão hamburger */
+.botao-menu {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 3px;
+}
+/* Ajustes para telas menores */
+.botao-menu {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .botao-menu {
+        display: flex;
+    }
+
+    .barra-navegacao {
+        flex-wrap: nowrap;
+    }
+
+    .barra-navegacao nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    }
+
+    .barra-navegacao nav ul {
+        display: none;
+        margin: 0;
+    }
+    .barra-navegacao h1 {
+    margin-right: auto;
+    }
+
+    .barra-navegacao nav {
+    margin-left: auto;
+    }
+    .barra-navegacao h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    }
+}
+video {
+    max-width: 100%;
+    height: auto;
+}

@@ -14,50 +14,60 @@
 <body>
 
     <header>
+    <div class="barra-navegacao">
         <h1>🐶 AuMigos</h1>
-<!--
-        preload="metadata" foi escolhido porque o vídeo é um conteúdo
-        complementar da página. Assim, o navegador carrega apenas
-        os metadados inicialmente, evitando o carregamento completo
-        do vídeo antes que o usuário decida reproduzi-lo.
-    -->
+       <nav>
+    <ul>
+        <li class="item-dropdown">
+            <a href="#caes" class="ativo">Cãezinhos</a>
 
-    <section>
-        <h2>Aumigos - Conectando amizades e laços</h2>
-            <nav>
-                <ul>
-                    <li><a href="#caes">Cãezinhos</a></li>
-                    <li><a href="#adocao">Quero adotar</a></li>
-                </ul>
-            </nav>
+            <ul class="dropdown">
+                <li><a href="#nina">Nina</a></li>
+                <li><a href="#fenix">Fênix</a></li>
+                <li><a href="#kiko">Kiko</a></li>
+                <li><a href="#stark">Stark</a></li>
+                <li><a href="#tobby">Tobby</a></li>
+            </ul>
+        </li>
 
-        <video
-            controls
-            preload="metadata"
-            poster="video/cachorro-poster.jpg"
+        <li><a href="#adocao">Quero adotar</a></li>
+    </ul>
+
+    <button
+        class="botao-menu"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+    </div>
+</header>
+
+<section>
+    <h2>Aumigos - Conectando amizades e laços</h2>
+
+    <video
+        controls
+        preload="metadata"
+        poster="video/cachorro-poster.jpg"
+    >
+        <source src="video/cachorro.mp4" type="video/mp4">
+        <source src="video/cachorro.webm" type="video/webm">
+
+        <track
+            kind="subtitles"
+            src="video/cachorro.vtt"
+            srclang="pt-BR"
+            label="Português"
+            default
         >
-            <source
-                src="video/cachorro.mp4"
-                type="video/mp4"
-            >
 
-            <source
-                src="video/cachorro.webm"
-                type="video/webm"
-            >
-
-            <track
-                kind="subtitles"
-                src="video/cachorro.vtt"
-                srclang="pt-BR"
-                label="Português"
-                default
-            >
-
-            Seu navegador não suporta a reprodução de vídeos.
-        </video>
-    </section>
-    </header>
+        Seu navegador não suporta a reprodução de vídeos.
+    </video>
+</section>
 
     <main>
 
@@ -77,7 +87,7 @@
                 do vídeo antes que o usuário decida reproduzi-lo.
             -->
 
-            <article class="card">
+            <article class="card" id="nina">
                 <h3>Nina</h3>
                 <p>
                     Nina costuma ser tranquila com as pessoas e gosta de receber atenção. 
@@ -85,7 +95,7 @@
                     Ainda está sendo acompanhada para entendermos melhor como se comporta em diferentes ambientes e com outros cães.
                 </p>
             </article>
-            <article class="card">
+            <article class="card" id="fenix">
                 <h3>Fênix</h3>
                 <p>
                     Fênix é bastante ativo e gosta de brincar e explorar o ambiente. 
@@ -93,7 +103,7 @@
                     Durante os passeios, pode ficar mais agitado, por isso é importante que o adotante tenha disposição para trabalhar sua educação e adaptação.
                 </p>
             </article>
-            <article class="card">
+            <article class="card" id="kiko">
                 <h3>Kiko</h3>
                 <p>
                     Kiko tem um comportamento mais tranquilo e costuma procurar a companhia das pessoas. 
@@ -101,14 +111,14 @@
                     Como qualquer cão em processo de adoção, pode precisar de um período de adaptação antes de mostrar completamente sua personalidade.
                 </p>
             </article>
-            <article class="card">
+            <article class="card" id="stark">
                 <h3>Stark</h3>
                 <p>
                     Stark é um cão que está à procura de um lar cheio de carinho e atenção. 
                     Sua personalidade ainda está sendo conhecida, por isso é importante respeitar seu tempo de adaptação ao novo ambiente.
                 </p>
             </article>
-            <article class="card">
+            <article class="card" id="tobby">
                 <h3>Tobby</h3>
                 <p>
                     Tobby é um cão que merece uma família responsável e disposta a oferecer cuidado, carinho e segurança.
