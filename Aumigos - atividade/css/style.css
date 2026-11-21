@@ -221,11 +221,29 @@ header {
     align-items: center;
     justify-content: flex-end;
     flex: 1;
+    position: relative;
     }
 
     .barra-navegacao nav ul {
         display: none;
         margin: 0;
+    }
+    .barra-navegacao nav.menu-aberto > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--cor-fundo);
+    padding: 15px;
+    border: 1px solid var(--cor-principal);
+    border-radius: var(--raio-borda);
+    z-index: 30;
+    }
+
+    .barra-navegacao nav.menu-aberto > ul > li {
+    display: block;
+    margin: 5px 0;
     }
     .barra-navegacao h1 {
     margin-right: auto;
@@ -242,4 +260,113 @@ header {
 video {
     max-width: 100%;
     height: auto;
+}
+/* Padroniza o tamanho das fotos dos cães */
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin: 1rem auto;
+}
+/* Organiza os cartões dos cães em uma grade responsiva */
+.grade-caes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Ajusta os cartões dentro da grade */
+.grade-caes .card {
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Adapta os cartões para telas menores */
+@media (max-width: 900px) {
+    .grade-caes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .grade-caes {
+        grid-template-columns: 1fr;
+    }
+}
+/* Destaca suavemente os cartões alternados */
+.grade-caes .card:nth-child(odd) {
+    border-color: var(--cor-principal);
+}
+
+/* Animação suave ao passar o mouse sobre os cartões */
+.grade-caes .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-caes .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+/* Mantém o gráfico SVG responsivo */
+.grafico-caes {
+    display: block;
+    width: 100%;
+    max-width: 31.25rem;
+    height: auto;
+    margin: 1rem 0;
+}
+
+/* Espaçamento das áreas principais */
+header,
+main,
+footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+/* Seção do título e vídeo */
+.secao-video {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+/* Título da seção do vídeo */
+.secao-video h2 {
+    margin: 0 0 1rem;
+}
+
+/* Vídeo centralizado com borda */
+.secao-video video {
+    display: block;
+    width: 90%;
+    max-width: 750px;
+    height: auto;
+    margin: 2rem auto;
+    border: 3px solid var(--cor-principal);
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    header,
+    main,
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .secao-video {
+        padding: 1rem;
+    }
+
+    .secao-video video {
+        width: 85%;
+        margin: 1.5rem auto;
+    }
 }

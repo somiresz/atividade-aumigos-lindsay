@@ -16,7 +16,7 @@
     <header>
     <div class="barra-navegacao">
         <h1>🐶 AuMigos</h1>
-       <nav>
+       <nav id="menu-navegacao">
     <ul>
         <li class="item-dropdown">
             <a href="#caes" class="ativo">Cãezinhos</a>
@@ -34,9 +34,11 @@
     </ul>
 
     <button
+        type="button"
         class="botao-menu"
         aria-label="Abrir menu de navegação"
         aria-expanded="false"
+        aria-controls="menu-navegacao"
     >
         <span></span>
         <span></span>
@@ -45,32 +47,36 @@
 </nav>
     </div>
 </header>
-
-<section>
+<main>
+<section class="secao-video">
     <h2>Aumigos - Conectando amizades e laços</h2>
 
+    <!--
+        preload="metadata" foi escolhido porque o vídeo é um conteúdo
+        complementar da página. Assim, o navegador carrega apenas
+        os metadados inicialmente, evitando o carregamento completo
+        do vídeo antes que o usuário decida reproduzi-lo.
+    -->
+
     <video
-        controls
-        preload="metadata"
-        poster="video/cachorro-poster.jpg"
+    controls
+    preload="metadata"
+    poster="assets/video/cachorro-poster.jpg"
+>
+    <source src="assets/video/cachorro.mp4" type="video/mp4">
+    <source src="assets/video/cachorro.webm" type="video/webm">
+
+    <track
+        kind="subtitles"
+        src="assets/video/cachorro.vtt"
+        srclang="pt-BR"
+        label="Português"
+        default
     >
-        <source src="video/cachorro.mp4" type="video/mp4">
-        <source src="video/cachorro.webm" type="video/webm">
 
-        <track
-            kind="subtitles"
-            src="video/cachorro.vtt"
-            srclang="pt-BR"
-            label="Português"
-            default
-        >
-
-        Seu navegador não suporta a reprodução de vídeos.
-    </video>
+    Seu navegador não suporta a reprodução de vídeos.
+</video>
 </section>
-
-    <main>
-
         <section id="caes" class="secao">
 
             <h2>Conheça nossos cães</h2>
@@ -79,16 +85,13 @@
                 Cada cão tem sua própria personalidade, rotina e necessidades. 
                 Por isso, procuramos apresentar seu comportamento de forma clara para ajudar você a encontrar um companheiro que combine com sua realidade.
             </p>
-
-            <!--
-                preload="metadata" foi escolhido porque o vídeo é um conteúdo
-                complementar da página. Assim, o navegador carrega apenas
-                os metadados inicialmente, evitando o carregamento completo
-                do vídeo antes que o usuário decida reproduzi-lo.
-            -->
-
+<div class="grade-caes">
             <article class="card" id="nina">
                 <h3>Nina</h3>
+                <img
+                    src="assets/images/nina.jpg"
+                    alt="Imagem ilustrativa da cadela Nina"
+                >
                 <p>
                     Nina costuma ser tranquila com as pessoas e gosta de receber atenção. 
                     É brincalhona, mas também aproveita momentos mais calmos. 
@@ -97,6 +100,10 @@
             </article>
             <article class="card" id="fenix">
                 <h3>Fênix</h3>
+                <img
+                    src="assets/images/fenix.jpg"
+                    alt="Imagem ilustrativa do cão Fênix"
+                >
                 <p>
                     Fênix é bastante ativo e gosta de brincar e explorar o ambiente. 
                     Precisa de uma rotina com espaço para gastar energia e receber atenção. 
@@ -105,6 +112,10 @@
             </article>
             <article class="card" id="kiko">
                 <h3>Kiko</h3>
+                <img
+                    src="assets/images/kiko.jpg"
+                    alt="Imagem ilustrativa do cão Kiko"
+                 >
                 <p>
                     Kiko tem um comportamento mais tranquilo e costuma procurar a companhia das pessoas. 
                     Gosta de ficar por perto e tende a se adaptar bem a momentos mais calmos. 
@@ -113,6 +124,10 @@
             </article>
             <article class="card" id="stark">
                 <h3>Stark</h3>
+                <img
+                    src="assets/images/stark.jpg"
+                    alt="Imagem ilustrativa do cão Stark"
+                >
                 <p>
                     Stark é um cão que está à procura de um lar cheio de carinho e atenção. 
                     Sua personalidade ainda está sendo conhecida, por isso é importante respeitar seu tempo de adaptação ao novo ambiente.
@@ -120,11 +135,16 @@
             </article>
             <article class="card" id="tobby">
                 <h3>Tobby</h3>
+                <img
+                    src="assets/images/tobby.jpg"
+                    alt="Imagem ilustrativa do cão Tobby"
+                >
                 <p>
                     Tobby é um cão que merece uma família responsável e disposta a oferecer cuidado, carinho e segurança.
                     Ele ainda está em processo de adaptação e precisa de tempo para demonstrar sua personalidade.
                 </p>
             </article>
+</div>
             <h3>Resumo dos nossos cães</h3>
             <table>
                 <thead>
@@ -162,6 +182,34 @@
                     </tr>
                 </tbody>
             </table>
+
+<!-- Gráfico SVG: quantidade de cães por porte -->
+<h3>Quantidade de cães por porte</h3>
+
+<svg
+    viewBox="0 0 500 220"
+    role="img"
+    aria-labelledby="titulo-grafico descricao-grafico"
+    class="grafico-caes"
+>
+    <title id="titulo-grafico">Quantidade de cães por porte</title>
+    <desc id="descricao-grafico">
+        Dois cães de porte pequeno, um de porte médio e dois de porte grande.
+    </desc>
+
+    <text x="10" y="45" fill="#34443a">Pequeno</text>
+    <rect x="100" y="22" width="280" height="35" rx="6" fill="#47745d"/>
+    <text x="390" y="45" fill="#34443a">2 cães</text>
+
+    <text x="10" y="105" fill="#34443a">Médio</text>
+    <rect x="100" y="82" width="140" height="35" rx="6" fill="#47745d"/>
+    <text x="250" y="105" fill="#34443a">1 cão</text>
+
+    <text x="10" y="165" fill="#34443a">Grande</text>
+    <rect x="100" y="142" width="280" height="35" rx="6" fill="#47745d"/>
+    <text x="390" y="165" fill="#34443a">2 cães</text>
+</svg>
+
         </section>
 
 
@@ -171,7 +219,7 @@
                 Está pensando em adotar? Preencha o formulário abaixo para demonstrar seu interesse. 
                 Depois, nossa equipe poderá entrar em contato para conversar sobre sua rotina, suas expectativas e o cão que você gostaria de conhecer.
             </p>
-            <form>
+            <form id="formulario-adocao">
                 <fieldset>
                     <legend>Seus dados</legend>
                     <label for="nome">Nome completo:</label>
@@ -195,7 +243,6 @@
                         type="tel"
                         id="telefone"
                         name="telefone"
-                        pattern="[0-9]{10,11}"
                         placeholder="Ex: 83999999999"
                     >
                     <br><br>
@@ -245,6 +292,7 @@
                 <button type="submit" class="botao">
                     Quero adotar! 🐾
                 </button>
+                <p id="mensagem-formulario" role="status"></p>
             </form>
         </section>
     </main>
@@ -253,6 +301,16 @@
     <footer>
         <p>
             AuMigos — Adoção responsável e novos começos.
+        </p>
+        <p>
+            Saiba mais sobre o bem-estar animal no
+            <a
+                href="https://www.worldanimalprotection.org.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                site da Proteção Animal Mundial
+            </a>.
         </p>
         <p>
             &copy; 2026 AuMigos
@@ -269,5 +327,8 @@
         video.canPlayType('video/webm; codecs="vp8, vorbis"')
     );
 </script>
+<!-- <script src="js/logica.js" defer></script> -->
+ <script src="js/menu.js" defer></script>
+ <script src="js/formulario.js" defer></script>
 </body>
 </html>

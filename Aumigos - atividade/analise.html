@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Dados — AuMigos</title>
+    <link rel="stylesheet" href="css/analise.css">
+</head>
+<body>
+    <h1>🐶 AuMigos — Analisador de Dados</h1>
+
+    <p>
+        Esta página demonstra a análise dos dados
+        dos cães cadastrados no projeto AuMigos.
+    </p>
+
+    <p>
+        Os resultados podem ser visualizados
+        no Console do navegador (F12).
+    </p>
+
+<section id="resultados-analise">
+    <h2>Resumo dos cães cadastrados</h2>
+    <label for="busca-cao">Buscar cachorro pelo nome:</label>
+<input
+    type="search"
+    id="busca-cao"
+    placeholder="Ex: Nina"
+>
+
+<button
+    type="button"
+    id="adicionar-cao"
+    aria-controls="lista-analise"
+>
+    Adicionar cachorro de exemplo
+</button>
+
+    <ul id="lista-analise"></ul>
+
+    <p id="resumo-analise" aria-live="polite"></p>
+</section>
+    
+    <script src="js/logica.js" defer></script>
+</body>
+</html>
