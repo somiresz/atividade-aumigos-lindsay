@@ -63,8 +63,8 @@ aumigos/
     │   ├── kiko.jpg
     │   ├── stark.jpg
     │   ├── tobby.jpg
-    │   ├── print-desktop.png
-    │   └── print-mobile.png
+    │   ├── print_pc.png
+    │   └── print_mobile.png
     └── video/
         ├── cachorro.mp4
         ├── cachorro.webm
