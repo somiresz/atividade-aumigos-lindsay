@@ -1,0 +1,372 @@
+
+:root {
+    /* Cores do site */
+    --cor-fundo: #fffaf3;
+    --cor-principal: #47745d;
+    --cor-secundaria: #edf5e9;
+    --cor-destaque: #f2c879;
+    --cor-texto: #34443a;
+
+    /* Espaçamentos */
+    --espacamento: 1rem;
+
+    /* Bordas */
+    --raio-borda: 1rem;
+}
+
+/* Estilização geral */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    /* Usamos rem nos tamanhos de fonte para manter a escala proporcional ao tamanho de fonte definido pelo navegador. */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--cor-principal);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+}
+
+/* Estilização das classes */
+.secao {
+    padding: 30px;
+    margin: 20px;
+}
+
+.card {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid var(--cor-principal);
+    border-radius: var(--raio-borda);
+}
+/* Seleciona apenas os parágrafos que estão dentro dos cards dos cães. */
+.card p {
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+/* Estilização dos IDs */
+#caes {
+    background-color: var(--cor-fundo);
+}
+
+#adocao {
+    background-color: var(--cor-secundaria);
+}
+
+/* Estados dos links */
+a:link {
+    color: var(--cor-principal);
+}
+
+a:visited {
+    color: #6b5b73;
+}
+
+a:hover {
+    color: #b8860b;
+}
+
+a:active {
+    color: #34443a;
+}
+
+/* Tabela dos cães */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--cor-principal);
+    text-align: left;
+}
+
+th {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+/* Botão do formulário */
+.botao {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--raio-borda);
+    cursor: pointer;
+}
+/* Barra de navegação */
+.barra-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-fundo);
+}
+/* Links da navegação */
+.barra-navegacao nav a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Link da seção */
+.barra-navegacao nav a.ativo {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Efeito ao passar o mouse */
+.barra-navegacao nav a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+/* Menu dropdown */
+.item-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.item-dropdown:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    margin: 5px 0;
+}
+
+.dropdown a {
+    display: block;
+}
+/* Cabeçalho fixo durante a rolagem */
+header {    
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--cor-fundo);
+    width: 100%;
+}
+/* Botão hamburger */
+.botao-menu {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-principal);
+    border-radius: 3px;
+}
+/* Ajustes para telas menores */
+.botao-menu {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .botao-menu {
+        display: flex;
+    }
+
+    .barra-navegacao {
+        flex-wrap: nowrap;
+    }
+
+    .barra-navegacao nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    position: relative;
+    }
+
+    .barra-navegacao nav ul {
+        display: none;
+        margin: 0;
+    }
+    .barra-navegacao nav.menu-aberto > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--cor-fundo);
+    padding: 15px;
+    border: 1px solid var(--cor-principal);
+    border-radius: var(--raio-borda);
+    z-index: 30;
+    }
+
+    .barra-navegacao nav.menu-aberto > ul > li {
+    display: block;
+    margin: 5px 0;
+    }
+    .barra-navegacao h1 {
+    margin-right: auto;
+    }
+
+    .barra-navegacao nav {
+    margin-left: auto;
+    }
+    .barra-navegacao h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    }
+}
+video {
+    max-width: 100%;
+    height: auto;
+}
+/* Padroniza o tamanho das fotos dos cães */
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 18rem;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin: 1rem auto;
+}
+/* Organiza os cartões dos cães em uma grade responsiva */
+.grade-caes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Ajusta os cartões dentro da grade */
+.grade-caes .card {
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Adapta os cartões para telas menores */
+@media (max-width: 900px) {
+    .grade-caes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .grade-caes {
+        grid-template-columns: 1fr;
+    }
+}
+/* Destaca suavemente os cartões alternados */
+.grade-caes .card:nth-child(odd) {
+    border-color: var(--cor-principal);
+}
+
+/* Animação suave ao passar o mouse sobre os cartões */
+.grade-caes .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-caes .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+/* Mantém o gráfico SVG responsivo */
+.grafico-caes {
+    display: block;
+    width: 100%;
+    max-width: 31.25rem;
+    height: auto;
+    margin: 1rem 0;
+}
+
+/* Espaçamento das áreas principais */
+header,
+main,
+footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+/* Seção do título e vídeo */
+.secao-video {
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+/* Título da seção do vídeo */
+.secao-video h2 {
+    margin: 0 0 1rem;
+}
+
+/* Vídeo centralizado com borda */
+.secao-video video {
+    display: block;
+    width: 90%;
+    max-width: 750px;
+    height: auto;
+    margin: 2rem auto;
+    border: 3px solid var(--cor-principal);
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    header,
+    main,
+    footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .secao-video {
+        padding: 1rem;
+    }
+
+    .secao-video video {
+        width: 85%;
+        margin: 1.5rem auto;
+    }
+}

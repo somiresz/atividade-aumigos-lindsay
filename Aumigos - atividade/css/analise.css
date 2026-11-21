@@ -1,0 +1,39 @@
+/* Estilos das classificações dos cães */
+
+.espera-recente {
+    color: #47745d;
+    font-weight: bold;
+}
+
+.espera-moderada {
+    color: #a66b16;
+    font-weight: bold;
+}
+
+.espera-prolongada {
+    color: #b34b4b;
+    font-weight: bold;
+}
+
+.cao-selecionado {
+    background-color: #edf5e9;
+    border: 2px solid #47745d;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#lista-analise button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 8px;
+    text-align: left;
+}
+
+#lista-analise button:focus-visible {
+    outline: 2px solid #47745d;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
