@@ -35,11 +35,11 @@ O projeto também inclui uma página de análise de dados, desenvolvida para apl
 
 ### Versão para computador
 
-![Versão desktop do AuMigos](assets/images/print-desktop.png)
+![Versão desktop do AuMigos](assets/images/print_pc.png)
 
 ### Versão para celular
 
-![Versão mobile do AuMigos](assets/images/print-mobile.png)
+![Versão mobile do AuMigos](assets/images/print_mobile.png)
 
 ## Estrutura do projeto
 
