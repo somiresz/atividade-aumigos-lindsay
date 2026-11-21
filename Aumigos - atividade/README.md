@@ -2,11 +2,7 @@
 
 ## Sobre o projeto
 
-O **AuMigos** é um site desenvolvido como projeto acadêmico de Front-End, com o objetivo de apresentar cães disponíveis para adoção e incentivar a adoção responsável.
-
-A página permite conhecer cinco cães, visualizar suas características e preencher um formulário para demonstrar interesse na adoção. Após o preenchimento, a proposta é que a equipe responsável entre em contato com o interessado.
-
-O projeto também inclui uma página de análise de dados, desenvolvida para aplicar os conteúdos de lógica de programação, funções, arrays, manipulação do DOM e eventos em JavaScript.
+O **AuMigos** é um site desenvolvido como projeto acadêmico de Front-End, com o objetivo de apresentar cães disponíveis para adoção e incentivar a adoção responsável. A página permite conhecer cinco cães, visualizar suas características e preencher um formulário para demonstrar interesse na adoção. Após o preenchimento, a proposta é que a equipe responsável entre em contato com o interessado. O projeto também inclui uma página de análise de dados, desenvolvida para aplicar os conteúdos de lógica de programação, funções, arrays, manipulação do DOM e eventos em JavaScript.
 
 ## Funcionalidades
 
@@ -71,6 +67,13 @@ aumigos/
         ├── cachorro-poster.jpg
         └── cachorro.vtt
 ```
+## Como executar
+
+1. Clone ou baixe o repositório do projeto.
+2. Abra a pasta no Visual Studio Code.
+3. Abra o arquivo index.html no navegador para visualizar o site.
+4. Para acessar o analisador de dados, abra analise.html.
+5. Na página de análise, utilize a busca e os botões disponíveis. O Console do navegador (F12) também apresenta resultados dos testes em JavaScript.
 
 ## Mapa dos requisitos
 
@@ -95,6 +98,7 @@ aumigos/
 
 - **Desenvolvimento:** Lindsay Soares Miranda
 - **Curso:** Análise e Desenvolvimento de Sistemas
+- **RGM:** 48352471
 
 ---
 
