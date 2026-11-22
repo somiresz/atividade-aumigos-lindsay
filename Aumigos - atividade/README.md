@@ -69,11 +69,20 @@ aumigos/
 ```
 ## Como executar
 
+**Opção 1 — Execução local**
+
 1. Clone ou baixe o repositório do projeto.
 2. Abra a pasta no Visual Studio Code.
-3. Abra o arquivo index.html no navegador para visualizar o site.
-4. Para acessar o analisador de dados, abra analise.html.
+3. Abra o arquivo `index.html` no navegador para visualizar o site.
+4. Para acessar o analisador de dados, abra `analise.html`.
 5. Na página de análise, utilize a busca e os botões disponíveis. O Console do navegador (F12) também apresenta resultados dos testes em JavaScript.
+
+**Opção 2 — Acesso online (GitHub Pages)**
+
+O projeto também está disponível online pelo GitHub Pages, permitindo acessar suas páginas diretamente pelo navegador, sem necessidade de baixar os arquivos ou instalar ferramentas.
+
+- **Site principal — AuMigos:** [Acessar site](https://somiresz.github.io/projeto-integrador-frontend-lindsay/Aumigos%20-%20atividade/)
+- **Página de análise de dados:** [Acessar analisador](https://somiresz.github.io/projeto-integrador-frontend-lindsay/Aumigos%20-%20atividade/analise.html)
 
 ## Mapa dos requisitos
 
